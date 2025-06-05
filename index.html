@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+    <style>
+        body{
+        background-color:rgb(20 20 40);
+        display:flex;
+        justify-content:center;
+        align-items:center;
+      }
+      section{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        margin:0;
+        padding:0;
+        border:6px solid transparent;
+        border-radius:20px ;
+        width:350px;
+        height:450px;
+        background-clip:border-box;
+        -webkit-background-clip:border-box;
+        width:350px;
+        height:450px;
+        border-radius:20px;
+        overflow:hidden;
+        z-index:2;
+      }
+      div.box{
+        display:block;
+        position:absolute;
+        margin:5px;
+        justify-content:center;
+        align-items:center;
+        width:340px;
+        height:440px;
+        backdrop-filter:blur(100px);
+        z-index:4;
+        border-radius:12px;
+      }
+      div.motor{
+        display:flex;
+        align-item:center;
+        justify-content:center;
+        position:relative;
+        width:250px;
+        height:650px;
+        background-image:linear-gradient(white,cyan,yellow,red);
+        background-clip:border-box;
+        -webkit-background-clip:border-box;
+        animation:rotate 3s normal infinite;
+        z-index:1;
+      }
+      @keyframes rotate{
+        100%{transform:rotate(360deg)}
+      }
+      div{
+          color:white;
+          text-align:center;
+      }
+      #name{
+          text-align:left;
+          height:30px;
+          border-radius:4px;
+          margin-top:20px;
+          margin-bottom:20px;
+          background-color:transparent;
+      }
+      #name:focus{
+          height:40px;
+          background-color:white;
+      }
+      #password{
+          text-align:left;
+          height:30px;
+          border-radius:4px;
+          background-color:transparent;
+      }
+      #password:focus{
+          height:40px;
+          background-color:white;
+      }
+button{
+    background-color:rgb(0 200 500);
+    height:35px;
+    border-radius:4px;
+    margin-top:40px;
+    color:white;
+    font-weight:1000;
+}
+button:focus{
+    background-color:gray;
+}
+#submit{
+    background-color:rgb(0 200 500);
+    height:35px;
+    border-radius:4px;
+    margin-top:40px;
+    color:white;
+    font-weight:1000;
+}
+#submit:focus{
+    background-color:gray;
+}
+    </style>
+<section>
+        <div class="motor"></div>
+        <div class="box">
+            <h1>Login</h1><br>
+            
+            <label for="name">Username:</label><br>
+            
+            <input type="text" name="username" id="name" ></input><br>
+            
+            <label for="password">Password:</label><br>
+            
+            <input type="password" name="password" id="password"></input><br>
+            
+            <input type="submit" id="submit" ></input>
+            
+            <button class="button">Forget Password</button>
+        
+        </div>
+</section>  
+</body>
+</html>
